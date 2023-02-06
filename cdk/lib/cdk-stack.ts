@@ -102,7 +102,7 @@ export class CdkStack extends cdk.Stack {
                     owner: "audiofile100",
                     repo: "aws-cdk-react",
                     branch: "main",
-                    oauthToken: cdk.SecretValue.secretsManager('github-token'),
+                    oauthToken: cdk.SecretValue.secretsManager('my-github-token'),
                     output: sourceOutput,
                     trigger: GitHubTrigger.WEBHOOK
                 }),
