@@ -118,6 +118,9 @@ export class CdkStack extends cdk.Stack {
                     project: new aws_codebuild.PipelineProject(this, "build-webapp", {
                         projectName: "react-webapp",
                         buildSpec: aws_codebuild.BuildSpec.fromSourceFilename("./cdk/buildspec.yml"),
+                        environment: {
+                            buildImage: aws_codebuild.LinuxBuildImage.STANDARD_6_0
+                        }
                     }),
                     outputs: [build]
                 }),
