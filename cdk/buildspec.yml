@@ -3,14 +3,22 @@ phases:
   install:
     runtime-versions:
       nodejs: 19
+    commands:
+      - echo installed node version 19
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies..
+      - node -e "console.log('Running Node.js ' + process.version)"
+      - echo $(pwd)
+      - echo $(ls)
   build:
     commands:
+      - echo $(pwd)
+      - echo $(ls)
       - npm install
       - npm run build
+      - echo compiling using npm run build
 
 artifacts:
   files:
-    - public/**/*
-    - src/**/*
-    - package.json
-    - tsconfig.json
+    - '**/*'
