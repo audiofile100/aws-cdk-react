@@ -38,6 +38,7 @@ export class CdkStack extends cdk.Stack {
             bucketName: domain,
             publicReadAccess: false,
             blockPublicAccess: aws_s3.BlockPublicAccess.BLOCK_ALL,
+            versioned: true,
             autoDeleteObjects: true,
             removalPolicy: RemovalPolicy.DESTROY
         });

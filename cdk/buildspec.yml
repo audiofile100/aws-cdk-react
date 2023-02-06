@@ -13,11 +13,11 @@ phases:
       - echo $(ls)
   build:
     commands:
-      - echo $(pwd)
-      - echo $(ls)
       - npm install
       - npm run build
       - echo compiling using npm run build
+      - echo $(pwd)
+      - echo $(ls)
 
 artifacts:
   files:
