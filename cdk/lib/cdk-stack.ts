@@ -92,7 +92,6 @@ export class CdkStack extends cdk.Stack {
         const pipeline = new aws_codepipeline.Pipeline(this, "react-pipeline", {
             pipelineName: "react-pipeline",
             crossAccountKeys: false,
-            restartExecutionOnUpdate: true
         });
 
         pipeline.addStage({
