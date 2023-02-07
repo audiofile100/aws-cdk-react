@@ -2,7 +2,7 @@
 export const App = () => {
     return (
         <div>
-            <p>Test</p>
+            <p>Testing</p>
         </div>
     )
 }

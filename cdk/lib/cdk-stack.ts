@@ -36,9 +36,9 @@ export class CdkStack extends cdk.Stack {
 
         const bucket = new aws_s3.Bucket(this, "react-bucket", {
             bucketName: domain,
-            publicReadAccess: false,
-            blockPublicAccess: aws_s3.BlockPublicAccess.BLOCK_ALL,
-            versioned: true,
+            publicReadAccess: true,
+            //blockPublicAccess: aws_s3.BlockPublicAccess.BLOCK_ALL,
+            websiteIndexDocument: "index.html",
             autoDeleteObjects: true,
             removalPolicy: RemovalPolicy.DESTROY
         });
